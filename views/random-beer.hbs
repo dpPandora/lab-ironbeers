@@ -1,0 +1,28 @@
+<style>
+    section {
+        display: flex;
+    }
+    section img {
+        width: 10%;
+        margin: 30px 10px;
+    }
+    section div {
+        width: 60%;
+        margin-left: 20px;
+    }
+</style>
+<section>
+    <img src="{{image_url}}" alt="">
+    <div>
+        <h1>{{name}}</h1>
+        <p>{{description}}</p>
+        <h2>{{tagline}}</h2>
+        <h3>Food pairing</h3>
+        <ul>
+            {{#each food_pairing}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <p><b>Brewers tips: </b>{{brewers_tips}}</p>
+    </div>
+</section>
